@@ -4,6 +4,7 @@
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
 */
 window.addEventListener('DOMContentLoaded', () => {
+
     const placeholder = document.getElementById('navbar-placeholder');
     const lang = document.documentElement.lang;
     if (placeholder) {
@@ -22,5 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
         if (mainNav) {
             mainNav.classList.add('sticky-top');
         }
+
     }
 });
