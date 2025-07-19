@@ -30,7 +30,7 @@ sort($files);
     </nav>
   </header>
   <main>
-    <div class="card">
+    <section>
       <h1>Galéria</h1>
       <p><a href="https://harmonia-budose.hu" target="_blank">Harmónia Budo SE</a></p>
       <p><a href="resources/dojo_kezikonyv.pdf" target="_blank">Dojo kézikönyv (PDF)</a></p>
@@ -47,7 +47,7 @@ foreach ($files as $file) {
 }
 ?>
       </div>
-    </div>
+    </section>
   </main>
   <footer>
     <p>&copy; Misogi Aikido Dojo</p>
