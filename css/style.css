@@ -2,6 +2,7 @@
   --color-gray: #4A5568; /* tompa indigó */
   --color-beige: #FAF4EB; /* krémes fehér */
   --color-green: #E63946; /* vermillion vörös */
+  --color-green-hover: #e06363; /* világosabb hover árnyalat */
   --font-main: 'Roboto', sans-serif;
 }
 body {
@@ -15,9 +16,19 @@ body {
 #mainNav .nav-link,
 #mainNav .navbar-brand {
   color: var(--color-green) !important;
+  transition: color 0.2s, background-color 0.2s, transform 0.2s;
 }
 #mainNav .navbar-brand img {
   height: 40px;
+}
+#mainNav .nav-link:hover,
+#mainNav .navbar-brand:hover {
+  color: var(--color-green-hover) !important;
+  background-color: rgba(0, 0, 0, 0.05);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transform: scale(1.05);
+  font-weight: 700;
 }
 #mainNav .navbar-brand img {
   height: 40px;
