@@ -24,8 +24,9 @@ Készíts egy weboldalt **responsive** designnal, optimalizálva desktop és mob
 - Roboto (sans-serif, jól olvasható, modern)
 
 ### Oldalstruktúra
-A menüsor ezt követő elemei: Rólunk | Aikidóról | Helyszín | Kapcsolat | Jelentkezés | Praktikus kérdések | Galéria
-Home menüpont
+A menüsor ezt követő elemei: Rólunk | Aikidoról | Helyszín | Kapcsolat | Jelentkezés | Praktikus kérdések | Galéria
+
+**Home menüpont**
 Ez a menüpont alapvetően a toborzásról szól. A szöveges tartalom a következő:
 A szöveges tartalom a következő:
 Szeptemberben új felnőtt kezdő csoport indul – várunk Téged is! 14 és 60 éves kor között bárki elkezdheti. Gyere nézd meg neked szól-e…
@@ -56,7 +57,7 @@ A sikeres emberek egyik alapszabálya, hogy rendszeresen mozognak! Mert amellett
 Az aikido edzőtermi gyakorlásával párhuzamosan egyre több alapelvet kezdesz használni a mindennapjaid során, az Aikido egyre jobban beépül az életedbe, és segít, hogy a feladataidat minél harmonikusabban és hatékonyabban oldd meg.
 Bekerülsz egy olyan közösségbe, ahol a haladóbbak segítik a fejlődésedet – mert nem versengeni akarnak  veled, hanem “csak” edzeni. Pont ettől más az aikido…
 
-Rólunk menüpont
+**Rólunk menüpont**
 A szöveges tartalom a következő:
 TODO - megírni - a Misogi Dojo története max 10 mondatban, további megerősítés, kiket várunk (14-60 éves korig - elnézést az idősebb korosztály diszkriminációjáért).
 Edzők neve, bemutatása
@@ -69,7 +70,7 @@ Az Egyesület által szervezett edzések nyitottak bárki számára, aki kedvet 
 
 Egyesületünk az Harmonia Budo SE tagja. A Harmonia Budo SE  2023. június 1. óta hivatalosan elismert szervezete az Aikikai Alapítványnak, s ezen időpont óta saját dan-vizsgáztatási jogosítvánnyal rendelkezik. A Harmonia Budo SE az egyik legnagyobb múltú független aikido szövetség Magyarországon.
 
-Aikidóról menüpont
+**Aikidoról menüpont**
 A szöveges tartalom a következő:
 Mi az Aikido? 
 
@@ -84,7 +85,7 @@ Az edzéseken és az edzőtáborokon az aikidókák a támadásokon, a konfiktus
 
 Az Aikido nemcsak fizikai gyakorlás, hanem spirituális és filozófiai dimenzióval is rendelkezik, amely a belső béke és a harmónia elérésére összpontosít.
 
-Helyszín menüpont
+**Helyszín menüpont**
 A szöveges tartalom a következő:
 Bárdos Lajos Általános Iskola tornaterme (nem pincehelyiség)
 1107 Budapest, Baranyai utca 16-18. (új oldalt nyitó link a Google Maps-ra)
@@ -119,7 +120,7 @@ Ha van lehetőség, akkor udvarias válasz-köszönet a jelentkező felé, hogy 
 További szöveges tartalom:
 TODO - megírni - mit hozzon az edzésre
 
-Praktikus kérdések menüpont
+**Praktikus kérdések menüpont**
 A szöveges tartalom a következő:
 Mikor leszel fekete öves?
 Jó, ne kerülgessük a forró kását, beszéljünk erről is! Ha rendszeresen jársz és kellőképpen nyitott vagy, 6-7 év alatt eljutsz a dan fokozatig.
@@ -192,6 +193,6 @@ https://zummaikido.hu, és az www.aikidoka.hu
 
 ## További módosítások
 
-- Ahol nincs konkrét utasítás, a Google Material Design irányelveit kell figyelembe venni.
+- használd fell a (https://github.com/StartBootstrap/startbootstrap-clean-blog)
 - Add fade-through navigation and persistent menu
 - A lábléc maradjon fixen az oldal alján, a tartalom hagyjon elegendő helyet előtte
