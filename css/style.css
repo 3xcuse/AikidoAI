@@ -18,20 +18,20 @@ body {
   color: var(--color-green) !important;
   transition: color 0.2s, background-color 0.2s, transform 0.2s;
 }
+#mainNav .navbar-brand {
+  padding: 0;
+}
 #mainNav .navbar-brand img {
   height: 40px;
+  display: block;
 }
 #mainNav .nav-link:hover,
 #mainNav .navbar-brand:hover {
-  color: var(--color-green-hover) !important;
-  background-color: rgba(0, 0, 0, 0.05);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  transform: scale(1.05);
-  font-weight: 700;
-}
-#mainNav .navbar-brand img {
-  height: 40px;
+  color: var(--color-green) !important;
+  background-color: transparent;
+  text-decoration: none;
+  transform: none;
+  font-weight: normal;
 }
 header.masthead:before {
   background-color: var(--color-gray);
