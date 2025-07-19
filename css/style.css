@@ -16,9 +16,6 @@ body {
 #mainNav .navbar-brand {
   color: #fff !important;
 }
-#mainNav .navbar-brand img {
-  height: 40px;
-}
 header.masthead:before {
   background-color: var(--color-gray);
   opacity: 0.6;
