@@ -36,25 +36,3 @@ img.rounded {
   border-radius: 8px;
   max-width: 100%;
 }
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: var(--color-gray);
-  color: white;
-  display: none;
-  padding: 1rem;
-}
-.cookie-banner button {
-  margin-left: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  cursor: pointer;
-}
-.cookie-banner button.accept {
-  background: var(--color-green);
-  color: white;
-}
-.cookie-banner button.decline {
-  background: var(--color-beige);
-}
