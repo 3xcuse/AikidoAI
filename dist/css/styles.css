@@ -10688,21 +10688,17 @@ header.masthead:before {
   opacity: 0.5;
 }
 header.masthead .page-heading,
-header.masthead .post-heading,
-header.masthead .site-heading {
+header.masthead .post-heading {
   color: #fff;
 }
-header.masthead .page-heading,
-header.masthead .site-heading {
+header.masthead .page-heading {
   text-align: center;
 }
-header.masthead .page-heading h1, header.masthead .page-heading .h1,
-header.masthead .site-heading h1,
-header.masthead .site-heading .h1 {
+header.masthead .page-heading h1,
+header.masthead .page-heading .h1 {
   font-size: 3rem;
 }
-header.masthead .page-heading .subheading,
-header.masthead .site-heading .subheading {
+header.masthead .page-heading .subheading {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.1;
@@ -10738,9 +10734,8 @@ header.masthead .post-heading .meta a {
     padding-top: 12.5rem;
     padding-bottom: 12.5rem;
   }
-  header.masthead .page-heading h1, header.masthead .page-heading .h1,
-  header.masthead .site-heading h1,
-  header.masthead .site-heading .h1 {
+  header.masthead .page-heading h1,
+  header.masthead .page-heading .h1 {
     font-size: 5rem;
   }
   header.masthead .post-heading h1, header.masthead .post-heading .h1 {
