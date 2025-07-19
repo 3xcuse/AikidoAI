@@ -4,6 +4,9 @@
   --color-green: #E63946; /* vermillion vörös */
   --font-main: 'Roboto', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-main);
   background: var(--color-beige);
