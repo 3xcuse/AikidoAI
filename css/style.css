@@ -10,11 +10,14 @@ body {
   color: var(--color-gray);
 }
 #mainNav {
-  background-color: var(--color-green);
+  background-color: #fff;
 }
 #mainNav .nav-link,
 #mainNav .navbar-brand {
-  color: #fff !important;
+  color: var(--color-green) !important;
+}
+#mainNav .navbar-brand img {
+  height: 40px;
 }
 #mainNav .navbar-brand img {
   height: 40px;
