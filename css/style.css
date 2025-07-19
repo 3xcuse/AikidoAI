@@ -1,78 +1,35 @@
 :root {
-  /* Updated palette */
   --color-gray: #4A5568; /* tompa indigó */
   --color-beige: #FAF4EB; /* krémes fehér */
   --color-green: #E63946; /* vermillion vörös */
   --font-main: 'Roboto', sans-serif;
 }
-
 body {
   font-family: var(--font-main);
-  margin: 0;
   background: var(--color-beige);
   color: var(--color-gray);
-  line-height: 1.6;
 }
-
-header {
-  background: var(--color-green);
-  color: white;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+#mainNav {
+  background-color: var(--color-green);
 }
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
+#mainNav .nav-link,
+#mainNav .navbar-brand {
+  color: #fff !important;
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  position: relative;
+header.masthead:before {
+  background-color: var(--color-gray);
+  opacity: 0.6;
 }
-
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: white;
-  left: 0;
-  bottom: -2px;
-  transition: width 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-main {
-  padding: 2rem;
-  min-height: calc(100vh - 160px);
-}
-
 footer {
   background: var(--color-green);
   color: white;
   text-align: center;
   padding: 1rem;
 }
-
-section {
-  margin-bottom: 2rem;
-}
-
 img.rounded {
   border-radius: 8px;
   max-width: 100%;
 }
-
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -82,25 +39,16 @@ img.rounded {
   display: none;
   padding: 1rem;
 }
-
 .cookie-banner button {
   margin-left: 1rem;
   padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
 }
-
 .cookie-banner button.accept {
   background: var(--color-green);
   color: white;
 }
-
 .cookie-banner button.decline {
   background: var(--color-beige);
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
 }
