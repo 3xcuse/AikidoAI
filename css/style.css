@@ -1,7 +1,8 @@
 :root {
-  --color-gray: #727374;
-  --color-beige: #F0D4BA;
-  --color-green: #89A585;
+  /* Updated palette */
+  --color-gray: #4A5568; /* tompa indigó */
+  --color-beige: #FAF4EB; /* krémes fehér */
+  --color-green: #E63946; /* vermillion vörös */
   --font-main: 'Roboto', sans-serif;
 }
 

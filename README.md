@@ -15,9 +15,9 @@ Készíts egy weboldalt **responsive** designnal, optimalizálva desktop és mob
 
 ### Színpaletta (új árnyalatok)
 
-- Szürke `#727374`
-- Bézs `#F0D4BA`
-- Zöld `#89A585`
+- Vermillion vörös `#E63946` – kiemelések, linkek, apró hangsúlyos elemek
+- Tompa indigó `#4A5568` – szöveg, keretek, fő kontraszt, nyugalmat adó alapszín
+- Krémes fehér `#FAF4EB` – háttér, tér, világosság, japán minimalizmus érzete
 
 ### Betűtípus
 
