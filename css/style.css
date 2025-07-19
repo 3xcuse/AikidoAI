@@ -32,6 +32,7 @@ body {
   text-decoration: none;
   transform: none;
   font-weight: normal;
+
 }
 header.masthead:before {
   background-color: var(--color-gray);
