@@ -9,6 +9,13 @@ body {
   font-family: var(--font-main);
   background: var(--color-beige);
   color: var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
 }
 #mainNav {
   background-color: #fff;
