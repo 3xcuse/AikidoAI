@@ -26,10 +26,12 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<div id="navbar-placeholder"></div>
-<div class='container px-4 px-lg-5 text-center my-4'>
-    <h1>Galéria</h1>
-</div>
+<header>
+        <div id="navbar-placeholder"></div>
+        <div class='container px-4 px-lg-5 text-center my-4'>
+            <h1>Galéria</h1>
+        </div>
+    </header>
 <main>
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
