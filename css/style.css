@@ -56,3 +56,17 @@ img.rounded {
   border-radius: 8px;
   max-width: 100%;
 }
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.gallery-grid img,
+.gallery-grid video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.gallery-grid > div {
+  flex: 1 0 300px;
+}
