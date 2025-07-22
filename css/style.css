@@ -75,3 +75,22 @@ img.rounded {
 .gallery-grid > div {
   flex: 1 0 300px;
 }
+
+.fade-transition {
+  transition: opacity 0.3s ease;
+}
+
+.fade-hidden {
+  opacity: 0;
+}
+
+/* fade-through animation used for SPA navigation */
+.fade-through-transition {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-through-hidden {
+  opacity: 0;
+  transform: scale(0.92);
+}
+

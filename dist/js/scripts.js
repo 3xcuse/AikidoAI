@@ -7,6 +7,47 @@ window.addEventListener('DOMContentLoaded', () => {
     const getPlaceholder = () => document.getElementById('navbar-placeholder') || document.getElementById('mainNav');
     const lang = document.documentElement.lang;
 
+    const fadeDuration = 300;
+    const fadeOut = (el) => {
+        if (!el) return Promise.resolve();
+        el.classList.add('fade-through-transition', 'fade-through-hidden');
+        return new Promise(r => setTimeout(r, fadeDuration));
+    };
+    const fadeIn = (el) => {
+        if (!el) return;
+        el.classList.add('fade-through-transition', 'fade-through-hidden');
+        requestAnimationFrame(() => el.classList.remove('fade-through-hidden'));
+    };
+
+    const initLightbox = () => {
+        const items = document.querySelectorAll('.gallery-item');
+        const modalEl = document.getElementById('lightboxModal');
+        if (!modalEl) return;
+        const modal = new bootstrap.Modal(modalEl);
+        const body = modalEl.querySelector('.modal-body');
+        items.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const type = item.dataset.type;
+                const src = item.dataset.src || item.getAttribute('src');
+                body.innerHTML = '';
+                if (type === 'video') {
+                    const video = document.createElement('video');
+                    video.controls = true;
+                    video.className = 'img-fluid rounded';
+                    video.src = src;
+                    body.appendChild(video);
+                } else {
+                    const img = document.createElement('img');
+                    img.className = 'img-fluid rounded';
+                    img.src = src;
+                    body.appendChild(img);
+                }
+                modal.show();
+            });
+        });
+    };
+
     const initNavScroll = (mainNav) => {
         let scrollPos = 0;
         const headerHeight = mainNav.clientHeight;
