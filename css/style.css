@@ -3,7 +3,7 @@
   --color-beige: #ffffff; /* fehér, navbarhez igazítva */
   --color-green: #E63946; /* vermillion vörös */
   --color-green-hover: #e06363; /* világosabb hover árnyalat */
-  --font-main: 'Roboto', sans-serif;
+  --font-main: 'Garamond', serif;
 }
 body {
   font-family: var(--font-main);
