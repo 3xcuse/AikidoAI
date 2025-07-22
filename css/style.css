@@ -102,8 +102,3 @@ img.rounded {
   transform: scale(0.92);
 }
 
-/* reserve space for the navbar before it loads */
-#navbar-placeholder {
-  min-height: 5rem;
-}
-
