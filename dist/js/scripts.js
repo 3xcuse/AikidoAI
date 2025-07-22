@@ -116,8 +116,6 @@ window.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('popstate', () => {
             navigate(location.pathname.replace(/^\//, ''), true);
         });
-
-        initLightbox();
     };
 
     const updateActiveNav = (url) => {
@@ -132,9 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     const navigate = (url, replace) => {
-        const main = document.querySelector('main');
-        fadeOut(main).then(() => {
-            fetch(url)
+        fetch(url)
             .then(r => r.text())
             .then(html => {
                 const parser = new DOMParser();
@@ -146,11 +142,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const main = document.querySelector('main');
 
                 if (newHeader && header) header.replaceWith(newHeader);
-                if (newMain && main) {
-                    main.replaceWith(newMain);
-                    fadeIn(newMain);
-                    initLightbox();
-                }
+                if (newMain && main) main.replaceWith(newMain);
 
                 document.title = doc.title;
                 const newDesc = doc.querySelector('meta[name="description"]');
@@ -171,13 +163,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
                 window.scrollTo(0, 0);
             });
-        });
     };
 
     const navFile = lang === 'en' ? 'navbar_en.html' : 'navbar_hu.html';
     loadNav(navFile).then(() => {
         initSpa();
         updateActiveNav(location.pathname.replace(/^\//, '') || 'index.html');
-        initLightbox();
     });
 });

@@ -19,10 +19,7 @@ main {
   flex: 1 0 auto;
 }
 #mainNav {
-  background-color: var(--color-beige);
-  position: sticky;
-  top: 0;
-  z-index: 1020;
+  background-color: #fff;
 }
 #mainNav .nav-link,
 #mainNav .navbar-brand {
@@ -49,10 +46,6 @@ main {
   color: var(--color-green-hover) !important;
   border-bottom: 2px solid var(--color-green-hover);
   font-weight: bold;
-}
-
-#mainNav.is-fixed {
-  background-color: rgba(250, 244, 235, 0.9);
 }
 header.masthead:before {
   background-color: var(--color-gray);
@@ -100,3 +93,4 @@ img.rounded {
   opacity: 0;
   transform: scale(0.92);
 }
+
