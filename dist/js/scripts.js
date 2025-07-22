@@ -7,47 +7,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const getPlaceholder = () => document.getElementById('navbar-placeholder') || document.getElementById('mainNav');
     const lang = document.documentElement.lang;
 
-    const fadeDuration = 300;
-    const fadeOut = (el) => {
-        if (!el) return Promise.resolve();
-        el.classList.add('fade-transition', 'fade-hidden');
-        return new Promise(r => setTimeout(r, fadeDuration));
-    };
-    const fadeIn = (el) => {
-        if (!el) return;
-        el.classList.add('fade-transition', 'fade-hidden');
-        requestAnimationFrame(() => el.classList.remove('fade-hidden'));
-    };
-
-    const initLightbox = () => {
-        const items = document.querySelectorAll('.gallery-item');
-        const modalEl = document.getElementById('lightboxModal');
-        if (!modalEl) return;
-        const modal = new bootstrap.Modal(modalEl);
-        const body = modalEl.querySelector('.modal-body');
-        items.forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                const type = item.dataset.type;
-                const src = item.dataset.src || item.getAttribute('src');
-                body.innerHTML = '';
-                if (type === 'video') {
-                    const video = document.createElement('video');
-                    video.controls = true;
-                    video.className = 'img-fluid rounded';
-                    video.src = src;
-                    body.appendChild(video);
-                } else {
-                    const img = document.createElement('img');
-                    img.className = 'img-fluid rounded';
-                    img.src = src;
-                    body.appendChild(img);
-                }
-                modal.show();
-            });
-        });
-    };
-
     const initNavScroll = (mainNav) => {
         let scrollPos = 0;
         const headerHeight = mainNav.clientHeight;
@@ -116,8 +75,6 @@ window.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('popstate', () => {
             navigate(location.pathname.replace(/^\//, ''), true);
         });
-
-        initLightbox();
     };
 
     const updateActiveNav = (url) => {
@@ -132,9 +89,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     const navigate = (url, replace) => {
-        const main = document.querySelector('main');
-        fadeOut(main).then(() => {
-            fetch(url)
+        fetch(url)
             .then(r => r.text())
             .then(html => {
                 const parser = new DOMParser();
@@ -146,11 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const main = document.querySelector('main');
 
                 if (newHeader && header) header.replaceWith(newHeader);
-                if (newMain && main) {
-                    main.replaceWith(newMain);
-                    fadeIn(newMain);
-                    initLightbox();
-                }
+                if (newMain && main) main.replaceWith(newMain);
 
                 document.title = doc.title;
                 const newDesc = doc.querySelector('meta[name="description"]');
@@ -171,13 +122,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
                 window.scrollTo(0, 0);
             });
-        });
     };
 
     const navFile = lang === 'en' ? 'navbar_en.html' : 'navbar_hu.html';
     loadNav(navFile).then(() => {
         initSpa();
         updateActiveNav(location.pathname.replace(/^\//, '') || 'index.html');
-        initLightbox();
     });
 });
