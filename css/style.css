@@ -16,6 +16,10 @@ body {
   overflow-y: scroll; /* avoid scrollbar jumping */
 }
 
+h2 {
+  font-family: var(--font-main);
+}
+
 main {
   flex: 1 0 auto;
 }
@@ -25,11 +29,13 @@ main {
   top: 0;
   width: 100%;
   z-index: 1000;
+  font-family: var(--font-main);
 }
 #mainNav .nav-link,
 #mainNav .navbar-brand {
   color: var(--color-green) !important;
   transition: color 0.2s, background-color 0.2s, transform 0.2s;
+  font-family: var(--font-main);
 }
 #mainNav .navbar-brand {
   padding: 0;
