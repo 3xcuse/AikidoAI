@@ -7,6 +7,27 @@ window.addEventListener('DOMContentLoaded', () => {
     const getPlaceholder = () => document.getElementById('navbar-placeholder') || document.getElementById('mainNav');
     const lang = document.documentElement.lang;
 
+    const initNavScroll = (mainNav) => {
+        let scrollPos = 0;
+        const headerHeight = mainNav.clientHeight;
+        window.addEventListener('scroll', () => {
+            const currentTop = document.body.getBoundingClientRect().top * -1;
+            if (currentTop < scrollPos) {
+                if (currentTop > 0 && mainNav.classList.contains('is-fixed')) {
+                    mainNav.classList.add('is-visible');
+                } else {
+                    mainNav.classList.remove('is-visible', 'is-fixed');
+                }
+            } else {
+                mainNav.classList.remove('is-visible');
+                if (currentTop > headerHeight && !mainNav.classList.contains('is-fixed')) {
+                    mainNav.classList.add('is-fixed');
+                }
+            }
+            scrollPos = currentTop;
+        });
+    };
+
     const loadNav = (navFile) => {
         return new Promise((resolve) => {
             const target = getPlaceholder();
@@ -17,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
                 const mainNav = document.getElementById('mainNav');
                 if (mainNav) {
-                    mainNav.classList.add('sticky-top');
+                    initNavScroll(mainNav);
                 }
                 resolve();
             };
