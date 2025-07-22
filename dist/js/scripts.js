@@ -41,8 +41,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 const href = link.getAttribute('href');
                 if (href && !href.startsWith('http') && !href.startsWith('mailto:')) {
                     e.preventDefault();
-                    const navCollapse = bootstrap.Collapse.getOrCreateInstance(document.getElementById('navbarResponsive'));
-                    navCollapse.hide();
+                    const navCollapseEl = document.getElementById('navbarResponsive');
+                    const navCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapseEl);
+                    if (navCollapseEl.classList.contains('show')) {
+                        navCollapse.hide();
+                    }
                     navigate(href);
                 }
             });
