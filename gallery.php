@@ -18,6 +18,9 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Galéria - Misogi Aikido Dojo">
+    <link rel="canonical" href="https://example.com/gallery.php">
+    <link rel="alternate" hreflang="hu" href="https://example.com/gallery.php">
+    <link rel="alternate" hreflang="en" href="https://example.com/gallery_en.php">
     <title>Galéria</title>
     <link rel="icon" type="image/png" href="assets/img/logo.png" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
