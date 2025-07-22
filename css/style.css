@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding-top: 5rem; /* Reserve space for the navbar */
+  overflow-y: scroll; /* avoid scrollbar jumping */
 }
 
 main {
@@ -20,6 +21,10 @@ main {
 }
 #mainNav {
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 #mainNav .nav-link,
 #mainNav .navbar-brand {
