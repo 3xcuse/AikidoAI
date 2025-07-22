@@ -75,6 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const cached = sessionStorage.getItem(navFile);
             const finalize = (html) => {
                 if (target) {
+                    target.style.minHeight = '0';
                     target.outerHTML = html;
                 }
                 const mainNav = document.getElementById('mainNav');
