@@ -42,6 +42,11 @@ main {
   font-weight: normal;
 
 }
+#mainNav .nav-link.active {
+  color: var(--color-green-hover) !important;
+  border-bottom: 2px solid var(--color-green-hover);
+  font-weight: bold;
+}
 header.masthead:before {
   background-color: var(--color-gray);
   opacity: 0.6;
