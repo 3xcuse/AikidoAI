@@ -1,6 +1,6 @@
 :root {
   --color-gray: #4A5568; /* tompa indigó */
-  --color-beige: #FAF4EB; /* krémes fehér */
+  --color-beige: #ffffff; /* fehér, navbarhez igazítva */
   --color-green: #E63946; /* vermillion vörös */
   --color-green-hover: #e06363; /* világosabb hover árnyalat */
   --font-main: 'Roboto', sans-serif;
