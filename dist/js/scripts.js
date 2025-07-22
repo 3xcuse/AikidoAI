@@ -10,13 +10,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const fadeDuration = 300;
     const fadeOut = (el) => {
         if (!el) return Promise.resolve();
-        el.classList.add('fade-transition', 'fade-hidden');
+        el.classList.add('fade-through-transition', 'fade-through-hidden');
         return new Promise(r => setTimeout(r, fadeDuration));
     };
     const fadeIn = (el) => {
         if (!el) return;
-        el.classList.add('fade-transition', 'fade-hidden');
-        requestAnimationFrame(() => el.classList.remove('fade-hidden'));
+        el.classList.add('fade-through-transition', 'fade-through-hidden');
+        requestAnimationFrame(() => el.classList.remove('fade-through-hidden'));
     };
 
     const initLightbox = () => {
