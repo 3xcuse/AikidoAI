@@ -77,10 +77,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (target) {
                     target.outerHTML = html;
                 }
-                const collapseEl = document.getElementById('navbarResponsive');
-                if (collapseEl) {
-                    bootstrap.Collapse.getOrCreateInstance(collapseEl);
-                }
                 const mainNav = document.getElementById('mainNav');
                 if (mainNav) {
                     initNavScroll(mainNav);
