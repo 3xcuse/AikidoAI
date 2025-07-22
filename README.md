@@ -21,7 +21,7 @@ Készíts egy weboldalt **responsive** designnal, optimalizálva desktop és mob
 
 ### Betűtípus
 
-- Roboto (sans-serif, jól olvasható, modern)
+- Garamond (serif, klasszikus)
 
 ### Oldalstruktúra
 A menüsor ezt követő elemei: Rólunk | Aikidoról | Helyszín | Kapcsolat | Jelentkezés | Praktikus kérdések | Galéria
