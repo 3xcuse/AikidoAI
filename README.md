@@ -26,7 +26,7 @@ Készíts egy weboldalt **responsive** designnal, optimalizálva desktop és mob
 ### Oldalstruktúra
 A menüsor ezt követő elemei: Rólunk | Aikidoról | Helyszín | Kapcsolat | Jelentkezés | Praktikus kérdések | Galéria
 
-**Home menüpont**
+**Kezdőlap menüpont**
 Ez a menüpont alapvetően a toborzásról szól. A szöveges tartalom a következő:
 A szöveges tartalom a következő:
 Szeptemberben új felnőtt kezdő csoport indul – várunk Téged is! 14 és 60 éves kor között bárki elkezdheti. Gyere nézd meg neked szól-e…
