@@ -106,11 +106,9 @@ window.addEventListener('DOMContentLoaded', () => {
                     const navCollapseEl = document.getElementById('navbarResponsive');
                     const navCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapseEl);
                     if (navCollapseEl.classList.contains('show')) {
-                        navCollapseEl.addEventListener('hidden.bs.collapse', () => navigate(href), { once: true });
                         navCollapse.hide();
-                    } else {
-                        navigate(href);
                     }
+                    navigate(href);
                 }
             });
         });
