@@ -24,6 +24,8 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="dist/css/styles.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
+    <link rel="robots" href="robots.txt">
 </head>
 <body>
 <div id="navbar-placeholder"></div>
