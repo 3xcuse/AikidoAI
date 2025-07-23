@@ -22,7 +22,7 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
     <link rel="alternate" hreflang="hu" href="https://example.com/gallery.php">
     <link rel="alternate" hreflang="en" href="https://example.com/gallery_en.php">
     <title>Gallery</title>
-    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link rel="icon" type="image/png" href="resources/other/favicon.png" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="dist/css/styles.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
