@@ -77,6 +77,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (target) {
                     target.outerHTML = html;
                 }
+                const navCollapseEl = document.getElementById('navbarResponsive');
+                if (navCollapseEl) {
+                    bootstrap.Collapse.getOrCreateInstance(navCollapseEl, { toggle: false });
+                }
                 const mainNav = document.getElementById('mainNav');
                 if (mainNav) {
                     initNavScroll(mainNav);
@@ -104,8 +108,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (href && !href.startsWith('http') && !href.startsWith('mailto:')) {
                     e.preventDefault();
                     const navCollapseEl = document.getElementById('navbarResponsive');
-                    const navCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapseEl);
-                    if (navCollapseEl.classList.contains('show')) {
+                    const navCollapse = navCollapseEl ? bootstrap.Collapse.getInstance(navCollapseEl) : null;
+                    if (navCollapse && navCollapseEl.classList.contains('show')) {
                         navCollapse.hide();
                     }
                     navigate(href);
