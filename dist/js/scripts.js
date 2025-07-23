@@ -23,8 +23,10 @@ window.addEventListener('DOMContentLoaded', () => {
         const items = document.querySelectorAll('.gallery-item');
         const modalEl = document.getElementById('lightboxModal');
         if (!modalEl) return;
-        const modal = new bootstrap.Modal(modalEl);
         const body = modalEl.querySelector('.modal-body');
+        const show = () => modalEl.classList.add('show');
+        const hide = () => modalEl.classList.remove('show');
+        modalEl.addEventListener('click', hide);
         items.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -43,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     img.src = src;
                     body.appendChild(img);
                 }
-                modal.show();
+                show();
             });
         });
     };
@@ -69,6 +71,15 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const initMenuToggle = () => {
+        const toggle = document.querySelector('.navbar-toggler');
+        const menu = document.getElementById('navbarResponsive');
+        if (!toggle || !menu) return;
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    };
+
     const loadNav = (navFile) => {
         return new Promise((resolve) => {
             const target = getPlaceholder();
@@ -80,6 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const mainNav = document.getElementById('mainNav');
                 if (mainNav) {
                     initNavScroll(mainNav);
+                    initMenuToggle();
                 }
                 resolve();
             };
@@ -104,9 +116,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (href && !href.startsWith('http') && !href.startsWith('mailto:')) {
                     e.preventDefault();
                     const navCollapseEl = document.getElementById('navbarResponsive');
-                    const navCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapseEl);
                     if (navCollapseEl.classList.contains('show')) {
-                        navCollapse.hide();
+                        navCollapseEl.classList.remove('show');
                     }
                     navigate(href);
                 }
