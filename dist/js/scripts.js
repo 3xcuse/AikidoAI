@@ -178,6 +178,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
                 window.scrollTo(0, 0);
                 initHeroImages();
+                initApplicationForm();
                 if (document.querySelector('.gallery-item')) {
                     initLightbox();
                 }
