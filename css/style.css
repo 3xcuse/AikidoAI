@@ -186,11 +186,32 @@ img.rounded {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.events-table tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+.events-table th {
+  background-color: var(--color-green);
+  color: #fff;
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--color-gray);
 }
 
 .events-table td {
   padding: 0.5rem;
   vertical-align: top;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.events-table tr:last-child td {
+  border-bottom: none;
 }
 
 .events-table td:nth-child(1) {
@@ -201,6 +222,10 @@ img.rounded {
 .events-table td:nth-child(2) {
   width: 160px;
   font-weight: bold;
+}
+
+.events-table strong {
+  color: var(--color-green);
 }
 
 .events-table .description {
