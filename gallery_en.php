@@ -24,8 +24,8 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
     <title>Gallery</title>
     <link rel="icon" type="image/png" href="assets/img/logo.png" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="dist/css/styles.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/min.css" rel="stylesheet">
     <link rel="sitemap" type="application/xml" href="sitemap.xml">
     <link rel="robots" href="robots.txt">
 </head>
@@ -70,6 +70,7 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/scripts.js"></script>
 </body>
 </html>
