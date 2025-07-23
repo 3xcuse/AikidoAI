@@ -5,6 +5,7 @@
   --color-green-hover: #e06363; /* világosabb hover árnyalat */
   --font-main: 'Garamond', serif;
 }
+html,
 body {
   font-family: var(--font-main);
   background: var(--color-beige);
@@ -14,6 +15,7 @@ body {
   min-height: 100vh;
   padding-top: 5rem; /* Reserve space for the navbar */
   overflow-y: scroll; /* avoid scrollbar jumping */
+  overflow-x: hidden; /* prevent mobile zoom from horizontal overflow */
 }
 
 h2 {
