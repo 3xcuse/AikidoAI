@@ -182,3 +182,31 @@ img.rounded {
   display: block;
 }
 
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.events-table td {
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+.events-table td:nth-child(1) {
+  width: 120px;
+  white-space: nowrap;
+}
+
+.events-table td:nth-child(2) {
+  width: 160px;
+  font-weight: bold;
+}
+
+.events-table .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
