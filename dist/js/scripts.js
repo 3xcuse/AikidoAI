@@ -48,6 +48,17 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const initHeroImages = () => {
+        const descEl = document.getElementById('hero-description');
+        const figures = document.querySelectorAll('.hero-image');
+        if (!descEl || figures.length === 0) return;
+        const showText = (e) => {
+            descEl.textContent = e.currentTarget.dataset.longText;
+        };
+        figures.forEach(fig => fig.addEventListener('click', showText));
+        descEl.textContent = figures[0].dataset.longText;
+    };
+
     const initNavScroll = (mainNav) => {
         let scrollPos = 0;
         const headerHeight = mainNav.clientHeight;
@@ -166,6 +177,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     history.pushState({}, '', url);
                 }
                 window.scrollTo(0, 0);
+                initHeroImages();
             });
     };
 
@@ -173,5 +185,6 @@ window.addEventListener('DOMContentLoaded', () => {
     loadNav(navFile).then(() => {
         initSpa();
         updateActiveNav(location.pathname.replace(/^\//, '') || 'index.html');
+        initHeroImages();
     });
 });
