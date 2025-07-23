@@ -209,7 +209,7 @@ img.rounded {
   font-size: 0.95rem;
 }
 
-.events-table tr:nth-child(even) {
+.events-table tbody tr:nth-child(even) {
   background-color: #f6f6f6;
 }
 
