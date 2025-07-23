@@ -3,16 +3,7 @@
   --color-beige: #ffffff; /* fehér, navbarhez igazítva */
   --color-green: #E63946; /* vermillion vörös */
   --color-green-hover: #e06363; /* világosabb hover árnyalat */
-  --color-row-alt: #f6f6f6; /* váltakozó sor háttér */
   --font-main: 'Garamond', serif;
-}
-
-:root[data-theme='dark'] {
-  --color-gray: #E2E8F0;
-  --color-beige: #1a202c;
-  --color-green: #E63946;
-  --color-green-hover: #ff7c7c;
-  --color-row-alt: #2d3748;
 }
 body {
   font-family: var(--font-main);
@@ -23,7 +14,6 @@ body {
   min-height: 100vh;
   padding-top: 5rem; /* Reserve space for the navbar */
   overflow-y: scroll; /* avoid scrollbar jumping */
-  transition: background-color 0.3s, color 0.3s;
 }
 
 h2 {
@@ -34,7 +24,7 @@ main {
   flex: 1 0 auto;
 }
 #mainNav {
-  background-color: var(--color-beige);
+  background-color: #fff;
   position: fixed;
   top: 0;
   width: 100%;
@@ -220,7 +210,7 @@ img.rounded {
 }
 
 .events-table tr:nth-child(even) {
-  background-color: var(--color-row-alt);
+  background-color: #f6f6f6;
 }
 
 .events-table th {

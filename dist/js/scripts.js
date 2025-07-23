@@ -7,27 +7,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const getPlaceholder = () => document.getElementById('navbar-placeholder') || document.getElementById('mainNav');
     const lang = document.documentElement.lang;
 
-    const applySavedTheme = () => {
-        const saved = localStorage.getItem('theme');
-        if (saved) {
-            document.documentElement.dataset.theme = saved;
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.dataset.theme = 'dark';
-        }
-    };
-
-    const initThemeToggle = () => {
-        const btn = document.getElementById('theme-toggle');
-        if (!btn) return;
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const html = document.documentElement;
-            const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
-            html.dataset.theme = next;
-            localStorage.setItem('theme', next);
-        });
-    };
-
     const fadeDuration = 300;
     const fadeOut = (el) => {
         if (!el) return Promise.resolve();
@@ -117,7 +96,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (mainNav) {
                     initNavScroll(mainNav);
                 }
-                initThemeToggle();
                 resolve();
             };
             if (cached) {
@@ -222,7 +200,6 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    applySavedTheme();
     const navFile = lang === 'en' ? 'navbar_en.html' : 'navbar_hu.html';
     loadNav(navFile).then(() => {
         initSpa();
