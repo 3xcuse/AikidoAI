@@ -111,28 +111,26 @@ img.rounded {
 /* hero images on the homepage */
 .hero-images {
   display: flex;
-
   justify-content: center;
-  gap: 0;
+  gap: 1rem;
 }
 
 .hero-image {
-  flex: 1 1 33%;
+  flex: 0 0 30%;
+  max-width: 200px;
   height: 200px;
-
   margin: 0;
   position: relative;
   overflow: hidden;
 }
 
 .hero-image img {
-  width: 100%;
-
-  height: 100%;
-  object-fit: cover;
-
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
   display: block;
   transition: transform 0.3s ease;
+  margin: auto;
 }
 
 .hero-image:hover img {
