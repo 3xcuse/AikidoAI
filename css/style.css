@@ -5,6 +5,7 @@
   --color-green-hover: #e06363; /* világosabb hover árnyalat */
   --font-main: 'Garamond', serif;
 }
+html,
 body {
   font-family: var(--font-main);
   background: var(--color-beige);
