@@ -183,12 +183,28 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             });
     };
+    const initApplicationForm = () => {
+        const form = document.querySelector(".application-form");
+        const successEl = document.getElementById("application-success");
+        const testBtn = document.getElementById("test-success");
+        const showSuccess = () => {
+            if (!successEl) return;
+            successEl.classList.remove("d-none");
+            fadeIn(successEl);
+        };
+        if (form) {
+            form.addEventListener("submit", () => setTimeout(showSuccess, 100));
+        }
+        if (testBtn) testBtn.addEventListener("click", showSuccess);
+    };
+
 
     const navFile = lang === 'en' ? 'navbar_en.html' : 'navbar_hu.html';
     loadNav(navFile).then(() => {
         initSpa();
         updateActiveNav(location.pathname.replace(/^\//, '') || 'index.html');
         initHeroImages();
+        initApplicationForm();
         if (document.querySelector('.gallery-item')) {
             initLightbox();
         }

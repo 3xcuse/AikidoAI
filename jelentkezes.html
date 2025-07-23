@@ -25,7 +25,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <section>
                         <h2>Jelentkezési űrlap</h2>
-                        <form action="mailto:misogi@aikido.hu" method="post" enctype="text/plain">
+                        <form class="application-form" action="mailto:misogi@aikido.hu" method="post" enctype="text/plain">
                             <div class="mb-3">
                                 <label class="form-label">Név
                                     <input class="form-control" type="text" name="name" required placeholder="Név">
@@ -48,6 +48,8 @@
                             </div>
                             <button class="btn btn-primary" type="submit">Küldés</button>
                         </form>
+                            <div id="application-success" class="alert alert-success d-none mt-3" tabindex="-1">Köszönjük a jelentkezést! Hamarosan felvesszük Veled a kapcsolatot.</div>
+                            <button type="button" id="test-success" class="btn btn-secondary btn-sm mt-2">Teszt üzenet</button>
                     </section>
                 </div>
             </div>
