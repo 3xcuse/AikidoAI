@@ -182,6 +182,23 @@ img.rounded {
   display: block;
 }
 
+@media (max-width: 576px) {
+  .profile-table,
+  .profile-table tbody,
+  .profile-table tr,
+  .profile-table td {
+    display: block;
+    width: 100%;
+  }
+  .profile-table tr {
+    margin-bottom: 1rem;
+  }
+  .profile-table td:first-child {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
 .events-table {
   width: 100%;
   border-collapse: collapse;
