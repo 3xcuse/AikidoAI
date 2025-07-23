@@ -20,6 +20,22 @@
 <div id="navbar-placeholder"></div>
 
     <main>
+        <section class="hero-images">
+
+            <figure class="hero-image" data-long-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec ipsum convallis, luctus nisl a, tincidunt mi. Aenean.">
+                <img src="resources/other/kanji Ai.gif" alt="Ai kanji">
+                <figcaption>Harmónia</figcaption>
+            </figure>
+            <figure class="hero-image" data-long-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec ipsum convallis, luctus nisl a, tincidunt mi. Aenean.">
+                <img src="resources/other/kanji Ki.gif" alt="Ki kanji">
+                <figcaption>Energia</figcaption>
+            </figure>
+            <figure class="hero-image" data-long-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec ipsum convallis, luctus nisl a, tincidunt mi. Aenean.">
+                <img src="resources/other/kanji Do.gif" alt="Do kanji">
+                <figcaption>Életfilozófia</figcaption>
+            </figure>
+        </section>
+        <div id="hero-description" class="hero-description"></div>
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
@@ -44,5 +60,17 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const descEl = document.getElementById('hero-description');
+            const figures = document.querySelectorAll('.hero-image');
+            if (!descEl || figures.length === 0) return;
+            const showText = (e) => {
+                descEl.textContent = e.currentTarget.dataset.longText;
+            };
+            figures.forEach(fig => fig.addEventListener('click', showText));
+            descEl.textContent = figures[0].dataset.longText;
+        });
+    </script>
 </body>
 </html>
