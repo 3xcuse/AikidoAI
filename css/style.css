@@ -14,7 +14,6 @@ body {
   min-height: 100vh;
   padding-top: 5rem; /* Reserve space for the navbar */
   overflow-y: scroll; /* avoid scrollbar jumping */
-  overflow-x: hidden; /* prevent mobile zoom from horizontal overflow */
 }
 
 h2 {
