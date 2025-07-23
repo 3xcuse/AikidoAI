@@ -60,17 +60,5 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/scripts.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const descEl = document.getElementById('hero-description');
-            const figures = document.querySelectorAll('.hero-image');
-            if (!descEl || figures.length === 0) return;
-            const showText = (e) => {
-                descEl.textContent = e.currentTarget.dataset.longText;
-            };
-            figures.forEach(fig => fig.addEventListener('click', showText));
-            descEl.textContent = figures[0].dataset.longText;
-        });
-    </script>
 </body>
 </html>
