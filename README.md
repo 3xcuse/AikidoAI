@@ -118,7 +118,13 @@ A kitöltést követően levél küldés a kapcsolatként megadott e-mail címre
 Ha van lehetőség, akkor udvarias válasz-köszönet a jelentkező felé, hogy tudja nem a dev/null-ba ment a levele.
 
 További szöveges tartalom:
-TODO - megírni - mit hozzon az edzésre
+Mit hozz magaddal az edzésre?
+
+- Kényelmes sportruha (póló és hosszú nadrág)
+- Papucs az öltöző és a tatami között
+- Ivóvíz és kisebb törölköző
+- Aikidogi és öv, ha van
+- Nyitott hozzáállás és figyelem
 
 **Praktikus kérdések menüpont**
 A szöveges tartalom a következő:

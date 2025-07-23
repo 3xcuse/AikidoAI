@@ -194,7 +194,13 @@ További szöveges tartalom:
 
 
 ```
-TODO - megírni - mit hozzon az edzésre
+Mit hozz magaddal az edzésre?
+
+- Kényelmes sportruha (póló és hosszú nadrág)
+- Papucs az öltöző és a tatami között
+- Ivóvíz és kisebb törölköző
+- Aikidogi és öv, ha van
+- Nyitott hozzáállás és figyelem
 ```
 
 
