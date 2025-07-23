@@ -113,12 +113,11 @@ img.rounded {
   display: flex;
 
   justify-content: center;
-  gap: 1rem;
+  gap: 0;
 }
 
 .hero-image {
-  flex: 0 0 30%;
-  max-width: 200px;
+  flex: 1 1 33%;
   height: 200px;
 
   margin: 0;
@@ -151,18 +150,13 @@ img.rounded {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-.hero-image .long-text {
-  display: block;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem;
-  border-radius: 8px;
+.hero-description {
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 0.9rem;
-  margin-top: 0.5rem;
-  transition: opacity 0.3s ease;
-}
 
-.hero-image:hover .long-text {
-  opacity: 1;
 }
 
