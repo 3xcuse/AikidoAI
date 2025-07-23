@@ -158,3 +158,26 @@ img.rounded {
 
 }
 
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table td {
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+.profile-table td:first-child {
+  width: 160px;
+  padding-right: 1rem;
+}
+
+.profile-table img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
