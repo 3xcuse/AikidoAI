@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const showText = (e) => {
       descEl.textContent = e.currentTarget.dataset.longText;
     };
-    figures.forEach((fig) => fig.addEventListener("click", showText));
+    figures.forEach((fig) => fig.addEventListener("mouseenter", showText));
     descEl.textContent = figures[0].dataset.longText;
   };
 
