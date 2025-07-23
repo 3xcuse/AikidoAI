@@ -28,17 +28,22 @@
                         <form action="mailto:misogi@aikido.hu" method="post" enctype="text/plain">
                             <div class="mb-3">
                                 <label class="form-label">Név
-                                    <input class="form-control" type="text" name="name" required>
+                                    <input class="form-control" type="text" name="name" required placeholder="Név">
                                 </label>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Telefon
-                                    <input class="form-control" type="tel" name="phone" required>
+                                    <input class="form-control" type="tel" name="phone" required placeholder="Telefon">
                                 </label>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">E-mail
-                                    <input class="form-control" type="email" name="email" required>
+                                    <input class="form-control" type="email" name="email" required placeholder="E-mail">
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Üzenet (opcionális)
+                                    <textarea class="form-control" name="message" rows="3" placeholder="Üzenet"></textarea>
                                 </label>
                             </div>
                             <button class="btn btn-primary" type="submit">Küldés</button>
