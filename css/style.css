@@ -208,7 +208,6 @@ img.rounded {
   padding: 0.5rem;
   vertical-align: top;
   border-bottom: 1px solid var(--color-gray);
-  background-color: inherit;
 }
 
 .events-table tr:last-child td {
@@ -236,48 +235,3 @@ img.rounded {
   overflow: hidden;
 }
 
-@media (max-width: 576px) {
-  .profile-table,
-  .profile-table tr,
-  .profile-table td {
-    display: block;
-    width: 100%;
-  }
-
-  .profile-table td:first-child {
-    text-align: center;
-    padding-right: 0;
-  }
-
-  .profile-table td:first-child img {
-    margin: 0 auto 0.5rem auto;
-  }
-
-  .events-table td,
-  .events-table th {
-    display: block;
-    width: 100%;
-  }
-
-  .events-table td:nth-child(1),
-  .events-table td:nth-child(2) {
-    white-space: normal;
-  }
-
-  .hero-images {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-image {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 200px;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-  }
-}
