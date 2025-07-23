@@ -108,3 +108,51 @@ img.rounded {
   transform: scale(0.92);
 }
 
+/* hero images on the homepage */
+.hero-images {
+  display: flex;
+}
+
+.hero-image {
+  flex: 1;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+.hero-image figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  pointer-events: none;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.hero-image .long-text {
+  display: block;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.hero-image:hover .long-text {
+  opacity: 1;
+}
+
