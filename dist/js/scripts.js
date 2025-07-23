@@ -178,6 +178,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
                 window.scrollTo(0, 0);
                 initHeroImages();
+                if (document.querySelector('.gallery-item')) {
+                    initLightbox();
+                }
             });
     };
 
@@ -186,5 +189,8 @@ window.addEventListener('DOMContentLoaded', () => {
         initSpa();
         updateActiveNav(location.pathname.replace(/^\//, '') || 'index.html');
         initHeroImages();
+        if (document.querySelector('.gallery-item')) {
+            initLightbox();
+        }
     });
 });
