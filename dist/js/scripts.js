@@ -111,6 +111,31 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const loadFooter = (file) => {
+        return new Promise((resolve) => {
+            const placeholder = document.getElementById('footer-placeholder');
+            if (!placeholder) {
+                resolve();
+                return;
+            }
+            const cached = sessionStorage.getItem(file);
+            const finalize = (html) => {
+                placeholder.outerHTML = html;
+                resolve();
+            };
+            if (cached) {
+                finalize(cached);
+            } else {
+                fetch(file)
+                    .then(r => r.text())
+                    .then(html => {
+                        sessionStorage.setItem(file, html);
+                        finalize(html);
+                    });
+            }
+        });
+    };
+
     const initSpa = () => {
         const navLinks = document.querySelectorAll('#mainNav a.nav-link');
         navLinks.forEach(link => {
@@ -201,7 +226,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const navFile = lang === 'en' ? 'navbar_en.html' : 'navbar_hu.html';
-    loadNav(navFile).then(() => {
+    Promise.all([loadNav(navFile), loadFooter('footer.html')]).then(() => {
         initSpa();
         updateActiveNav(location.pathname.replace(/^\//, '') || 'index.html');
         initHeroImages();
