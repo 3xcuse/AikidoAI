@@ -7,6 +7,36 @@ window.addEventListener('DOMContentLoaded', () => {
     const getPlaceholder = () => document.getElementById('navbar-placeholder') || document.getElementById('mainNav');
     const lang = document.documentElement.lang;
 
+    const loadCommon = (file) => {
+        return new Promise((resolve) => {
+            const cached = sessionStorage.getItem(file);
+            const finalize = (html) => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const headEl = doc.getElementById('head-common');
+                if (headEl) {
+                    document.head.insertAdjacentHTML('beforeend', headEl.innerHTML);
+                }
+                const footEl = doc.getElementById('footer-common');
+                const placeholder = document.getElementById('footer-placeholder');
+                if (footEl && placeholder) {
+                    placeholder.outerHTML = footEl.innerHTML;
+                }
+                resolve();
+            };
+            if (cached) {
+                finalize(cached);
+            } else {
+                fetch(file)
+                    .then(r => r.text())
+                    .then(html => {
+                        sessionStorage.setItem(file, html);
+                        finalize(html);
+                    });
+            }
+        });
+    };
+
     const fadeDuration = 300;
     const fadeOut = (el) => {
         if (!el) return Promise.resolve();
@@ -201,7 +231,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const navFile = lang === 'en' ? 'navbar_en.html' : 'navbar_hu.html';
-    loadNav(navFile).then(() => {
+    Promise.all([loadCommon('common.html'), loadNav(navFile)]).then(() => {
         initSpa();
         updateActiveNav(location.pathname.replace(/^\//, '') || 'index.html');
         initHeroImages();

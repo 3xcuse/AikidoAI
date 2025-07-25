@@ -22,12 +22,7 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
     <link rel="alternate" hreflang="hu" href="https://example.com/gallery.php">
     <link rel="alternate" hreflang="en" href="https://example.com/gallery_en.php">
     <title>Galéria</title>
-    <link rel="icon" type="image/png" href="resources/other/favicon.png" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="dist/css/styles.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="sitemap" type="application/xml" href="sitemap.xml">
-    <link rel="robots" href="robots.txt">
+    <!--common-head-->
 </head>
 <body>
 <div id="navbar-placeholder"></div>
@@ -61,15 +56,7 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
         </div>
     </div>
 </main>
-<footer class="border-top">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="small text-center text-muted fst-italic">&copy; Misogi Aikido Dojo</div>
-            </div>
-        </div>
-    </div>
-</footer>
+    <div id="footer-placeholder"></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/scripts.js"></script>
 </body>
