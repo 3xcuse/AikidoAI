@@ -23,6 +23,8 @@ $videoFiles = file_exists($videoDir) ? list_files($videoDir, '/\.(mp4|webm|ogg|a
     <link rel="alternate" hreflang="en" href="https://example.com/gallery_en.php">
     <title>Galéria</title>
     <!--common-head-->
+    <link href="dist/css/styles.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <div id="navbar-placeholder"></div>
