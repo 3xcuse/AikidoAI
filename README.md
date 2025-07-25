@@ -202,3 +202,4 @@ https://zummaikido.hu, és az www.aikidoka.hu
 - használd fell a (https://github.com/StartBootstrap/startbootstrap-clean-blog)
 - Add fade-through navigation and persistent menu
 - A lábléc maradjon fixen az oldal alján, a tartalom hagyjon elegendő helyet előtte
+- A footer markup is now loaded dynamically from `footer.html`
